@@ -11,6 +11,6 @@ docker run --name base_web -p 3000:3000 -d -v /Users/wangyiting/Documents/ESB/ba
 ### image
 #### nodejs 16 image
 ```
-docker pull 70804/webbase:v1.16
+docker pull 70804/webbase:v16.17.0
 ```
 
