@@ -11,11 +11,12 @@ ARG METAKEY1
 ARG METAKEY2
 ARG INDEX_URL
 ARG TRUSTED_HOST
-ARG REGISTRY
+ARG NPM_REGISTRY
+ARG MLaas_env
 
 # npm install
 COPY additional_package*.json /app/
-RUN npm config set registry $REGISTRY
+RUN npm config set registry $NPM_REGISTRY
 RUN cat additional_package.json | jq -r '.dependencies | keys | .[]' | xargs npm install --save
 
 COPY ./src /app/src
